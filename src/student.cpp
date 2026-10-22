@@ -96,7 +96,7 @@ bool dequeue(Queue& q, int& nomor) {
      q.depan = q.depan->next;
 
      if(q.depan == nullptr){
-         q.belakang == nullptr; 
+         q.belakang = nullptr; 
      }
      delete hapus;
      return true;
@@ -111,7 +111,9 @@ void clear(Queue& q) {
      q.depan = q.depan->next;
      delete hapus;  
     }
+    q.belakang = nullptr;
 }
+
 
 // =============================================================================
 // MAIN() — program utama. TIDAK DINILAI, BEBAS DIUBAH.
